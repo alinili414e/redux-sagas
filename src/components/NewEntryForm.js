@@ -17,7 +17,6 @@ function NewEntryForm() {
                     placeholder="100.00"
                     icon="dollar" iconPosition='left'
                 />
-
             </Form.Group>
             <ButtonSaveOrCancel />
         </Form>

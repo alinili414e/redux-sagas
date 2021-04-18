@@ -3,6 +3,7 @@ import { Form, Container, Grid, GridColumn, Header, Icon, Segment, Statistic, Bu
 import './App.css';
 import ButtonSaveOrCancel from './components/ButtonSaveOrCancel';
 import MainHeader from './components/MainHeader';
+import NewEntryForm from './components/NewEntryForm';
 
 function App() {
   return (
@@ -68,24 +69,7 @@ function App() {
         </Grid>
       </Segment>
       <MainHeader type="h3" title="Add new Transaction" />
-      <Form unstackable>
-        <Form.Group>
-          <Form.Input
-            label='Description'
-            width={12}
-            icon='tags'
-            placeholder="New Shinny" />
-          <Form.Input
-            label='Value'
-            width={4}
-            icon='tags'
-            placeholder="100.00"
-            icon="dollar" iconPosition='left'
-          />
-
-        </Form.Group>
-        <ButtonSaveOrCancel />
-      </Form>
+      <NewEntryForm />
     </Container>
   );
 }

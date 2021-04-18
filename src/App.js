@@ -1,5 +1,5 @@
 
-import { Container, Grid, Icon, Segment } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import './App.css';
 import DisplayBalance from './components/DisplayBalance';
 import MainHeader from './components/MainHeader';

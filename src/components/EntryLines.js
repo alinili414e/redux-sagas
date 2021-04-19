@@ -1,21 +1,15 @@
-import React from 'react'
-import { Grid, Icon, Segment } from 'semantic-ui-react'
+import React from 'react';
+import { Container } from 'semantic-ui-react';
+import EntryLine from './EntryLine';
 
-function EntryLines({ desc, value, isExpense = false }) {
+function EntryLines({ entries, deleteEntry }) {
     return (
-        <Segment color={isExpense ? 'red' : 'green'}>
-            <Grid columns={3} textAlign="right">
-                <Grid.Row>
-                    <Grid.Column width={10} textAlign="left">{desc}</Grid.Column>
-                    <Grid.Column width={3} textAlign="right">{value}</Grid.Column>
-                    <Grid.Column width={3}>
-                        <Icon name="edit" bordered />
-                        <Icon name="trash" bordered />
-                    </Grid.Column>
-                </Grid.Row>
-            </Grid>
-        </Segment>
-    )
+        <Container>
+            {entries.map((entry) => (
+                <EntryLine key={entry.id} {...entry} deleteEntry={deleteEntry} />
+            ))}
+        </Container>
+    );
 }
 
-export default EntryLines
+export default EntryLines;

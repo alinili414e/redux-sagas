@@ -1,15 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { Statistic } from 'semantic-ui-react';
 
-export default function DisplayBalance({ color = 'black', title, value, size = 'tiny' }) {
+function DisplayBalance({ id, title, value, color = 'black', size = 'tiny' }) {
     return (
         <Statistic size={size} color={color}>
-            <Statistic.Label style={{ textAlign: 'left' }}>
-                {title}
-            </Statistic.Label>
-            <Statistic.Value >
-                {value}
-            </Statistic.Value>
+            <Statistic.Label style={{ texAlign: 'left' }}>{title}</Statistic.Label>
+            <Statistic.Value>{value}</Statistic.Value>
         </Statistic>
-    )
+    );
 }
+
+export default DisplayBalance;

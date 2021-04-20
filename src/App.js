@@ -12,11 +12,12 @@ function App() {
     const result = entries.filter(entry => entry.id !== id);
     setEntries(result);
   };
-  const addEntry = (desc, value) => {
+  const addEntry = (desc, value, isExpense) => {
     const result = entries.concat({
       id: entries.length + 1 + desc.length,
       desc,
       value,
+      isExpense
     });
     setEntries(result);
   }
